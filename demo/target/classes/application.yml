@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    #为了防止中文乱码，在URL中默认添加了?useUnicode=true&characterEncoding=UTF-8来使用UTF8编码，
+    #&allowMultiQueries=true表示支持批量更新，因为我的电脑时区紊乱，无法启动项目，因此需要加&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8080
